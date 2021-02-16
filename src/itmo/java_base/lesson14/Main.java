@@ -41,7 +41,7 @@ public class Main {
         String baseURL = "https://ru.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch=";
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Please, enter the query: ");
-        String query = null;
+        String query;
         String encodeURL = null;
         try {
             query = reader.readLine();
@@ -53,7 +53,7 @@ public class Main {
     }
 
     public static StringBuilder pars(String inputUrl) {
-        URL url = null;
+        URL url;
         StringBuilder builder = new StringBuilder();
         try {
             url = new URL(inputUrl);
